@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Reset CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <!-- My CSS -->
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- Slot picker -->
+  <div class="slot-picker">
+    <ul class="slot-picker__column" id="slot1">
+      <li class="slot-picker__select-item">10代</li>
+      <li class="slot-picker__select-item">20代</li>
+      <li class="slot-picker__select-item">30代</li>
+      <li class="slot-picker__select-item">40代</li>
+      <li class="slot-picker__select-item">50代</li>
+      <li class="slot-picker__select-item">60代</li>
+    </ul>
+    <ul class="slot-picker__column" id="slot2">
+      <li class="slot-picker__select-item">男性</li>
+      <li class="slot-picker__select-item">女性</li>
+    </ul>
+    <ul class="slot-picker__column" id="slot3">
+      <li class="slot-picker__select-item">会社員</li>
+      <li class="slot-picker__select-item">自営業</li>
+      <li class="slot-picker__select-item">公務員</li>
+      <li class="slot-picker__select-item">無職</li>
+    </ul>
+  </div>
+  <!-- /Slot picker -->
+
+  <!-- Input要素 (実際に使用する際はtype="hidden"にするかも) -->
+  <div class="output">
+    <input class="output-item" type="text" value="" data-slot="slot1">
+    <input class="output-item" type="text" value="" data-slot="slot2">
+    <input class="output-item" type="text" value="" data-slot="slot3">
+  </div>
+  <!-- /Input要素 (実際に使用する際はtype="hidden"にするかも) -->
+  
+  <!-- Scripts -->
+  <script src="script.js" async></script>
+  <!-- /Scripts -->
+</body>
+</html>

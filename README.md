@@ -1,1 +1,1 @@
-# slot-picker
+# Slot Picker

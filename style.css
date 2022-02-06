@@ -1,0 +1,74 @@
+/** Reset **/
+ul, li {
+  list-style: none;
+}
+body {
+  display: grid;
+  overflow: hidden;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+/** Custom **/
+.slot-picker {
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 10px;
+  display: flex;
+  position: relative;
+}
+
+.slot-picker::before {
+  content: '';
+  background: #000;
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+  height: 10px;
+  width: 12px;
+}
+
+.slot-picker__column {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: y mandatory;
+  height: 100px;
+}
+
+.slot-picker__column:not(:last-child) {
+  border-right: 1px solid rgba(0, 0, 0, .1);
+}
+
+.slot-picker__column::-webkit-scrollbar {
+  display: none;
+}
+
+.slot-picker__select-item {
+  padding: 7px 15px;
+  scroll-snap-align: center;
+  text-align: center;
+}
+
+.slot-picker__select-item:first-child {
+  padding-top: 38px;
+}
+
+.slot-picker__select-item:last-child {
+  padding-bottom: 38px;
+}
+
+.output {
+  align-items: center;
+  display: flex;
+  width: 50vw;
+}
+
+.output-item {
+  font-size: 70px;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+}
